@@ -7,6 +7,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 //DB setup
+mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/auth', {
     useMongoClient: true
 });
